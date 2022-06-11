@@ -4,7 +4,9 @@ import errno
 import json
 from datetime import datetime
 
-buket='raw-data-bucket-bi'
+buketRaw='raw-data-bucket-bi'
+buketTransf='transform-data-bucket-bi'
+
 s3=boto3.client('s3',aws_access_key_id='AKIAQPZIOPJXLYAQFNNS',aws_secret_access_key="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")
 s3_client=boto3.client('s3',aws_access_key_id='AKIAQPZIOPJXLYAQFNNS',aws_secret_access_key="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")
 objetosJson=['detalleEmpresas','gananciasAnuales','banlancesAnuales','historicos','cambioMoneda']
@@ -50,4 +52,4 @@ def download_dir(client, bucket, path, target):
                 print("Envio exitoso a S3")
 
 
-download_dir(s3, buket, 'api', 'files')
+download_dir(s3, buketRaw, 'api', 'files')

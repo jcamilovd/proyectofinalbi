@@ -28,7 +28,7 @@ historicos=[]
 cambioMoneda=[]
 
 #Creamos el cliente de S3
-s3_client=boto3.client('s3',aws_access_key_id='AKIAQPZIOPJXLYAQFNNS',aws_secret_access_key="cl")
+s3_client=boto3.client('s3',aws_access_key_id='AKIAQPZIOPJXLYAQFNNS',aws_secret_access_key="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")
 
 
 for emp in empresas:
@@ -73,7 +73,6 @@ if reqStatus==200:
     cambioMoneda.append(reqcambio.json())
 
 #enviamos los archivos a S3
-fecha=datetime.now().strftime("%Y%m%d%S%M%S")
 json_object=[]
 for i in range(5):
     print("i="+str(i))
@@ -93,7 +92,7 @@ for i in range(5):
     s3_client.put_object(
         Body=str(json.dumps(json_object)),
         Bucket='raw-data-bucket-bi',
-        Key='api/alphavantage/'+objetosJson[i]+'/'+objetosJson[i]+'-'+fecha+'.json'
+        Key='api/alphavantage/'+objetosJson[i]+'/'+objetosJson[i]+'-'+'.json'
     )
 
 print("Envio exitoso a S3")

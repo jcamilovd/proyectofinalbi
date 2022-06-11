@@ -62,7 +62,7 @@ for emp in empresas:
 
     print("Consultamos la empresa "+emp+ ", en 10 segundos consultamos la siguiente")
     #esperamos 10 segundos por restriccion del api
-    time.sleep(10)
+    time.sleep(2)
 
 
 

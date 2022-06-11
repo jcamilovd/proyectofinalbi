@@ -2,7 +2,7 @@ import os
 import boto3
 import errno
 
-buketRaw='raw-data-bucket-bi'
+buketRaw='transform-data-bucket-bi'
 s3=boto3.client('s3',aws_access_key_id='AKIAQPZIOPJXLYAQFNNS',aws_secret_access_key="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")
 
 

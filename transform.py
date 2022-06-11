@@ -45,7 +45,7 @@ def download_dir(client, bucket, path, target):
                 for i in range(5):
                     s3_client.put_object(
                         Body=str(json.dumps(json_object)),
-                        Bucket='raw-data-bucket-bi',
+                        Bucket='transform-data-bucket-bi',
                         Key='api/alphavantage/' + objetosJson[i] + '/' + objetosJson[i] + '-' + fecha + '.json'
                     )
 

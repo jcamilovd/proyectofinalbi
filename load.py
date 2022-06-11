@@ -6,18 +6,18 @@ import io
 def almacenarDatos():
     try:
         # creamos las variables de conexion a la DB
-        PSQL_HOST = "proyecto-final-bi.ciutdnea4hyr.us-east-1.rds.amazonaws.com"
+        PSQL_HOST = "dbetl-bi.c8w24k27veqn.us-east-1.rds.amazonaws.com"
         PSQL_PORT = "5432"
         PSQL_USER = "postgres"
-        PSQL_PASS = "6106384ca"
+        PSQL_PASS = "qwer1234"
         PSQL_DB = "postgres"
 
-        # cargamos los Json
-        pathEmpresas = './files/alphavantage/detalleEmpresas/detalleEmpresas-20201202.json'
-        pathBalances = './files/alphavantage/banlancesAnuales/banlancesAnuales-20201202.json'
-        pathGanancias = './files/alphavantage/gananciasAnuales/gananciasAnuales-20201202.json'
-        pathHistoricos = './files/alphavantage/historicos/historicos-20201202.json'
-        pathMoneda = './files/alphavantage/cambioMoneda/cambioMoneda-20201202.json'
+        # traemos los path
+        pathEmpresas = './files/alphavantage/detalleEmpresas/detalleEmpresas-20220609423242.json'
+        pathBalances = './files/alphavantage/banlancesAnuales/banlancesAnuales-20220609423242.json'
+        pathGanancias = './files/alphavantage/gananciasAnuales/gananciasAnuales-20220609423242.json'
+        pathHistoricos = './files/alphavantage/historicos/historicos-20220609423242.json'
+        pathMoneda = './files/alphavantage/cambioMoneda/cambioMoneda-20220609423242.json'
         scDetalleEmpresa='./scripts/detalle_empresa.txt'
 
         detalleEmpresas = pd.read_json(pathEmpresas, orient='records')
